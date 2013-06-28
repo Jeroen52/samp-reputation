@@ -1,4 +1,4 @@
-<?php
+<?php //Fresh install? You mainly have to edit config.php by following the README file.
 	require_once(dirname(__FILE__)."/config.php");
 	
 	if(isset($_GET["lookup"]) && isset($_GET["ip"]))
