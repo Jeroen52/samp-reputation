@@ -4,9 +4,9 @@
 	if(isset($_GET["lookup"]) && isset($_GET["ip"]))
 	{
 		if(strlen($_GET["ip"]) > 15)
-			die("invalid request");
+			die("invalid request"); //Invalid IP address, it is too long.
 	
-		$db = @new mysqli($config["mysql"]["hostname"], $config["mysql"]["username"], $config["mysql"]["password"], $config["mysql"]["database"]);
+		$db = @new mysqli($config["mysql"]["hostname"], $config["mysql"]["username"], $config["mysql"]["password"], $config["mysql"]["database"]); //You can edit the database info in the config.
 		
 		if($db->connect_error)
 			die("Connection to the database could not be established.");
