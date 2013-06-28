@@ -43,12 +43,12 @@
 			$check_ip_a = $check_ip_r->fetch_assoc();
 			
 			if($check_ip_a[$config["mysql"]["ban_table"]["field_permanent"]])
-				echo "2";
+				echo "2"; //Permabannned
 			else
-				echo "1";
+				echo "1"; //Tempbanned
 		}
 		else
-			echo "0";
+			echo "0"; //Not banned
 	}
 	else
 		echo "invalid request";
