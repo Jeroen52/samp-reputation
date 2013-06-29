@@ -1,6 +1,6 @@
 Just getting this started, standby!
 =======
-�SAMP-Blacklist�
+•SAMP-Blacklist•
 
 SAMP-Blacklist is here to ease the flow of information between different SA-MP servers in order to offer reputation records about players.
 
