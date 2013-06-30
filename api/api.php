@@ -1,4 +1,10 @@
-<?php //Fresh install? You mainly have to edit config.php by following the README file.
+<?php
+	/*
+	==Info==
+	The SAMP Reputation project has been founded by Johnson and Jeroen!
+	Fresh install? You mainly have to edit config.php, just follow the instructions in the README file.
+	Feel free to fork this project!
+	*/
 	require_once(dirname(__FILE__)."/config.php");
 	
 	if(isset($_GET["lookup"]) && isset($_GET["ip"]))
