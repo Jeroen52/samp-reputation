@@ -1,6 +1,6 @@
 Our current todo list.
 
-Bugs, suggestions and questions should be posted at https://github.com/Jeroen52/samp-blacklist/issues
+Bugs, suggestions and questions should be posted at https://github.com/Jeroen52/samp-reputation/issues
 
 Anything that has been done should be marked, and not removed until it is in the master branch.
 
