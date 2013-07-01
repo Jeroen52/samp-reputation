@@ -15,7 +15,7 @@ public OnFilterScriptInit()
 	// URLs should be without the protocol (http://)
 	
     reputation::add_source("Ls-rcr", "ls-rcr.com/api/samp-reputation/", 5);
-	reputation::add_source("Sona", "sona-gaming.com/rep/", 5);
+	reputation::add_source("Sona", "sona-gaming.com/api/samp-reputation/", 5);
 	return 1;
 }
 
