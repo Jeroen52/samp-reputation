@@ -15,7 +15,7 @@
 		$db = @new mysqli($config["mysql"]["hostname"], $config["mysql"]["username"], $config["mysql"]["password"], $config["mysql"]["database"]); //You can edit the database info in the config.
 		
 		if($db->connect_error)
-			die("0");
+			die("0"); //Could not connect to the database.
 			
 		$ip = $db->escape_string($_GET["ip"]);
 		
