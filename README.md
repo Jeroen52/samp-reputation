@@ -8,9 +8,9 @@ This project is currently in a very early stage, and any suggestion and help is 
 =======
 api contains the api, this is here to manage your own blacklist/replist.
 
-example-scripts contains example scripts using samp-reputation.
+filterscripts contains example scripts using samp-reputation.
 
-include contains the samp-reputation includes, this is here to get the information from a replist.
+pawno/include contains the samp-reputation includes, this is here to get the information from a replist.
 
 =-=-=-=-=-=-=
 
