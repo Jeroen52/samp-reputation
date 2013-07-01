@@ -1,17 +1,21 @@
 #include <a_samp>
+#include <samp-reputation>
 
 #define WARNING_LIMIT 5
 #define KICK_LIMIT 99
 
 public OnFilterScriptInit()
 {
-	//Add any blacklists here!! add_source(name[], url[], weight)
-    add_source("Lsrcr", "http://ls-rcr.com/api/api.php", 5);
-    //add_source("SONA", "http://sona-gaming.com/rep/api.php", 5);//Currently inactive
 	print("\n--------------------------------------");
-	print(" SONA-Reputation example script by Johnson and Jeroen!");
+	print(" SA-MP Reputation example script by Johnson and Jeroen!");
 	print("--------------------------------------\n");
-	//lookup(ip[])
+	
+	// Add any blacklists here
+	// reputation::add_source(name[], url[], weight)
+	// URLs should be without the protocol (http://)
+	
+    reputation::add_source("Ls-rcr", "ls-rcr.com/api/samp-reputation/", 5);
+	reputation::add_source("Sona", "sona-gaming.com/rep/", 5);
 	return 1;
 }
 
@@ -22,7 +26,7 @@ public OnFilterScriptExit()
 
 public OnPlayerConnect(playerid)
 {
-    new rSTATUS = lookup(GetPlayerIp(playerid));
+    /*new rSTATUS = lookup(GetPlayerIp(playerid));
     if(rSTATUS >= WARNING_LIMIT)
 	{
 	    if(rSTATUS >= KICK_LIMIT)
@@ -34,7 +38,7 @@ public OnPlayerConnect(playerid)
 	}
 	else
 	{
-	}
+	}*/
 	return 1;
 }
 
@@ -44,26 +48,6 @@ public OnPlayerDisconnect(playerid, reason)
 }
 
 public OnPlayerText(playerid, text[])
-{
-	return 1;
-}
-
-public OnPlayerCommandText(playerid, cmdtext[])
-{
-	if (strcmp("/mycommand", cmdtext, true, 10) == 0)
-	{
-		// Do something here
-		return 1;
-	}
-	return 0;
-}
-
-public OnRconCommand(cmd[])
-{
-	return 1;
-}
-
-public OnRconLoginAttempt(ip[], password[], success)
 {
 	return 1;
 }
