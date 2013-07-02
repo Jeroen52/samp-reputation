@@ -27,6 +27,7 @@ new
 	reputation_source_count = 0;
 	
 forward reputation::check_source(index, response_code, data[]);
+forward reputation::check_ip(index, response_code, data[]);
 
 // -------------------------------------------------------------------------- //
 
@@ -44,6 +45,35 @@ stock reputation::add_source(name[REPUTATION_NAME_MAX_LENGTH], url[REPUTATION_UR
 	new query[REPUTATION_URL_MAX_LENGTH + 20];
 	format(query, sizeof(query), "%s?lookup", url);
 	HTTP(reputation_source_count, HTTP_GET, query, "", "reputation_check_source");
+	return 1;
+}
+
+stock lookup(playerid)
+{
+	//Problem: error 035: argument type mismatch (argument 3)
+	new plrIP[16];
+    GetPlayerIp(playerid, plrIP, sizeof(plrIP));
+	printf(plrIP);
+	new query[REPUTATION_URL_MAX_LENGTH + 20];
+	format(query, sizeof(query), "%s?lookup&ip=", plrIP);
+	return HTTP(reputation_source_count, HTTP_GET, query, "", "reputation_check_ip");
+}
+
+stock reputation::check_ip(index, response_code, data[])
+{
+	if(response_code == 200)
+	{
+		return data;
+	}
+	else
+	{
+		return data;
+	}
+}
+
+stock lookupip(ip[])
+{
+	printf(ip);
 	return 1;
 }
 

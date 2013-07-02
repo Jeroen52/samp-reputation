@@ -52,10 +52,26 @@ public OnPlayerText(playerid, text[])
 	return 1;
 }
 
+public OnPlayerCommandText(playerid, cmdtext[])
+{
+	if (strcmp("/lookupip", cmdtext, true, 10) == 0)
+	{
+		lookupip(cmdtext);
+		return 1;
+	}
+	return 0;
+}
+
 public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 {
-	//Maybe add a rep lookup here?
-	return 1;
+	if(IsPlayerAdmin(playerid) == 1)
+	{
+	    //I have no idea how I can fix this: error 035: argument type mismatch (argument 3)
+		//new status = lookup(clickedplayerid);
+		//new string;
+		//format(string, sizeof(string), "%s", lookup(clickedplayerid));
+		//SendPlayerMessageToPlayer(playerid, playerid, status);
+	}
 }
 
 stock SendToAdmins(COLOR,message[])
