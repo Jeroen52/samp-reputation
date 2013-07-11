@@ -7,7 +7,7 @@
 public OnFilterScriptInit()
 {
 	print("\n--------------------------------------");
-	print(" SA-MP Reputation example script by Johnson and Jeroen!");
+	print(" SA-MP Reputation example script");
 	print("--------------------------------------\n");
 	
 	// Add any blacklists here

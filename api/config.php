@@ -1,7 +1,6 @@
 <?php
 	/*
 	==Info==
-	The SAMP Reputation project has been founded by Johnson and Jeroen!
 	Fresh install? You mainly have to edit config.php, just follow the instructions in the README file.
 	Feel free to fork this project!
 	*/
