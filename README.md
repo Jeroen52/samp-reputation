@@ -5,8 +5,8 @@ To ease the flow of information between different SA-MP servers in order to offe
 # Functions
 
 * `reputation::add_source(name[], url[], weight)`
-* `lookup(playerid)
-* `lookup(ip[])
+* `lookup(playerid)`
+* `lookup(ip[])`
 
 
 =======
